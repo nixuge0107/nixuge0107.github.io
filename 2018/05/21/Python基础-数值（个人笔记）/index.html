@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Python,基础语法," />
 
 
 
@@ -86,16 +86,20 @@
 
 
 
-<meta name="description" content="Hello World">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Xu&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Python数据类型 Python数据类型是不允许改变的，意味着若改变数据类型，将重新分配内存空间。  Python算数运算符与c语言不同的1      .     ** 返回x的y次幂2 .   // 返回商的整数部分   Python中没有&amp;amp;&amp;amp;、||等运算符，均被and/or/not代替。">
+<meta name="keywords" content="Python,基础语法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python基础-数值（个人笔记）">
+<meta property="og:url" content="http://yoursite.com/2018/05/21/Python基础-数值（个人笔记）/index.html">
 <meta property="og:site_name" content="Xu&#39;s Blog">
-<meta property="og:description" content="Hello World">
+<meta property="og:description" content="Python数据类型 Python数据类型是不允许改变的，意味着若改变数据类型，将重新分配内存空间。  Python算数运算符与c语言不同的1      .     ** 返回x的y次幂2 .   // 返回商的整数部分   Python中没有&amp;amp;&amp;amp;、||等运算符，均被and/or/not代替。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-a14a3c71909dfcb9033e4e821200e953_1200x500.jpg">
+<meta property="og:updated_time" content="2018-05-21T08:43:53.799Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xu&#39;s Blog">
-<meta name="twitter:description" content="Hello World">
+<meta name="twitter:title" content="Python基础-数值（个人笔记）">
+<meta name="twitter:description" content="Python数据类型 Python数据类型是不允许改变的，意味着若改变数据类型，将重新分配内存空间。  Python算数运算符与c语言不同的1      .     ** 返回x的y次幂2 .   // 返回商的整数部分   Python中没有&amp;amp;&amp;amp;、||等运算符，均被and/or/not代替。">
+<meta name="twitter:image" content="https://pic4.zhimg.com/v2-a14a3c71909dfcb9033e4e821200e953_1200x500.jpg">
 
 
 
@@ -125,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/21/Python基础-数值（个人笔记）/"/>
 
 
 
 
 
-  <title>Xu's Blog</title>
+  <title>Python基础-数值（个人笔记） | Xu's Blog</title>
   
 
 
@@ -150,8 +154,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
       <a href="https://github.com/nixuge0107"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,9 +247,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -276,9 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/21/Python基础-数值（个人笔记）/" itemprop="url">Python基础-数值（个人笔记）</a></h1>
+          <h1 class="post-title" itemprop="name headline">Python基础-数值（个人笔记）</h1>
         
 
         <div class="post-meta">
@@ -369,8 +370,7 @@
       
 
       
-        
-          <p><img src="https://pic4.zhimg.com/v2-a14a3c71909dfcb9033e4e821200e953_1200x500.jpg" alt="python"></p>
+        <p><img src="https://pic4.zhimg.com/v2-a14a3c71909dfcb9033e4e821200e953_1200x500.jpg" alt="python"></p>
 <h2 id="Python数据类型"><a href="#Python数据类型" class="headerlink" title="Python数据类型"></a>Python数据类型</h2><blockquote>
 <p>Python数据类型是不允许改变的，意味着若改变数据类型，将重新分配内存空间。</p>
 </blockquote>
@@ -378,14 +378,30 @@
 <blockquote>
 <p>Python中没有&amp;&amp;、||等运算符，均被and/or/not代替。</p>
 </blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/21/Python基础-数值（个人笔记）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<a id="more"></a>
+<h2 id="Python数值类型"><a href="#Python数值类型" class="headerlink" title="Python数值类型"></a>Python数值类型</h2><h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><p><code>int(x)</code>即可将x转换为整数。</p>
+<h3 id="复数类型"><a href="#复数类型" class="headerlink" title="复数类型"></a>复数类型</h3><p><code>a+bj</code>可以写成<code>complex(a,b)</code><br>复数a和实数b均为浮点型。</p>
+<h3 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h3><ol>
+<li><code>exp(x)</code><br>返回e的x次幂(ex),如math.exp(1) 返回2.718281828459045 </li>
+<li><code>max(x1,x2,...)</code><br> 返回给定参数的最大值，参数可以为序列。</li>
+<li><code>min(x1,x2,...)</code><br>返回给定参数的最小值，参数可以为序列。</li>
+<li><code>pow(x,y)</code><br><code>x**y</code>运算后的值。</li>
+<li><code>round(x,[,n])</code><br>返回浮点数x的四舍五入值。</li>
+<li><code>sqrt(x)</code><br>返回数字x的平方根。</li>
+<li><code>range(start, stop[, step])</code><br>返回指定的list数字。</li>
+</ol>
+<h3 id="随机数"><a href="#随机数" class="headerlink" title="随机数"></a>随机数</h3><ol>
+<li><code>choice(lst)</code><br>从序列的元素中随机挑选一个元素。</li>
+<li><code>randrange ([start,] stop [,step])</code><br>从指定范围内随机获取一个随机数。</li>
+<li><code>random()</code><br>随机生成一个[0,1)范围内的随机数。</li>
+<li><code>shuffle(lst)</code><br>将序列的所有元素随机排序。</li>
+<li><code>uniform(x,y)</code><br>随机生成一个实数。</li>
+</ol>
+<h3 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h3><ol>
+<li><code>degrees(x)</code><br>将弧度转换为角度,如degrees(math.pi/2) ， 返回90.0。</li>
+<li><code>radians(x)</code><br>将角度转换为弧度。</li>
+</ol>
+
       
     </div>
     
@@ -400,161 +416,38 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/21/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Xu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Xu's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/21/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-21T16:39:56+08:00">
-                2018-05-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
           
-            
+            <a href="/tags/基础语法/" rel="tag"><i class="fa fa-tag"></i> 基础语法</a>
           
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  78
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/21/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -564,10 +457,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -575,6 +469,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -595,8 +493,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -676,6 +583,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python数据类型"><span class="nav-number">1.</span> <span class="nav-text">Python数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python算数运算符"><span class="nav-number">2.</span> <span class="nav-text">Python算数运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#与c语言不同的"><span class="nav-number">2.1.</span> <span class="nav-text">与c语言不同的</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python数值类型"><span class="nav-number">3.</span> <span class="nav-text">Python数值类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#类型转换"><span class="nav-number">3.1.</span> <span class="nav-text">类型转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复数类型"><span class="nav-number">3.2.</span> <span class="nav-text">复数类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数学函数"><span class="nav-number">3.3.</span> <span class="nav-text">数学函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#随机数"><span class="nav-number">3.4.</span> <span class="nav-text">随机数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三角函数"><span class="nav-number">3.5.</span> <span class="nav-text">三角函数</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -831,6 +754,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
