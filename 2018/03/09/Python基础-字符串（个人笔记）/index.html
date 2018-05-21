@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/xiaoji_32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/xiaoji_16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Python,基础语法," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Python字符串运算符 +字符串连接。 *重复输出字符串。 []获取字符串中的字符。 [:]截取字符串你的一部分。 in如果字符串中包含给定的字符返回 True。1print(&amp;apos;H&amp;apos; in &amp;apos;Hello&amp;apos;)        #结果输出True">
+<meta name="keywords" content="Python,基础语法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python基础--字符串">
+<meta property="og:url" content="http://yoursite.com/2018/03/09/Python基础-字符串（个人笔记）/index.html">
+<meta property="og:site_name" content="Xu&#39;s Blog">
+<meta property="og:description" content="Python字符串运算符 +字符串连接。 *重复输出字符串。 []获取字符串中的字符。 [:]截取字符串你的一部分。 in如果字符串中包含给定的字符返回 True。1print(&amp;apos;H&amp;apos; in &amp;apos;Hello&amp;apos;)        #结果输出True">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://sudasuta.com/wp-content/uploads/2017/10/Ty-Dale-1.jpg">
+<meta property="og:updated_time" content="2018-05-21T16:28:18.056Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python基础--字符串">
+<meta name="twitter:description" content="Python字符串运算符 +字符串连接。 *重复输出字符串。 []获取字符串中的字符。 [:]截取字符串你的一部分。 in如果字符串中包含给定的字符返回 True。1print(&amp;apos;H&amp;apos; in &amp;apos;Hello&amp;apos;)        #结果输出True">
+<meta name="twitter:image" content="http://sudasuta.com/wp-content/uploads/2017/10/Ty-Dale-1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/03/09/Python基础-字符串（个人笔记）/"/>
+
+
+
+
+
+  <title>Python基础--字符串 | Xu's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+      <a href="https://github.com/nixuge0107"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Xu's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Code the Whole World</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/09/Python基础-字符串（个人笔记）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xu's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Python基础--字符串</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-09T21:37:50+08:00">
+                2018-03-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Python基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  724
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://sudasuta.com/wp-content/uploads/2017/10/Ty-Dale-1.jpg" alt="Python"></p>
+<h2 id="Python字符串运算符"><a href="#Python字符串运算符" class="headerlink" title="Python字符串运算符"></a>Python字符串运算符</h2><ol>
+<li><code>+</code><br>字符串连接。</li>
+<li><code>*</code><br>重复输出字符串。</li>
+<li><code>[]</code><br>获取字符串中的字符。</li>
+<li><code>[:]</code><br>截取字符串你的一部分。</li>
+<li><code>in</code><br>如果字符串中包含给定的字符返回 True。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&apos;H&apos; in &apos;Hello&apos;)        #结果输出True</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<a id="more"></a>
+<ol start="6">
+<li><code>not in</code><br>如果字符串中不包含给定的字符返回 True。</li>
+<li><code>r/R</code><br>原始字符串。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print( r&apos;\n&apos; )          #直接打印\n</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="格式化字符串"><a href="#格式化字符串" class="headerlink" title="格式化字符串"></a>格式化字符串</h2><h3 id="类似c语言的方法"><a href="#类似c语言的方法" class="headerlink" title="类似c语言的方法"></a>类似c语言的方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print (&quot;Hello,My name is %s.I&apos;m %d years old!&quot; % (&apos;Bob&apos;, 10))</span><br></pre></td></tr></table></figure>
+<h3 id="format-格式化函数"><a href="#format-格式化函数" class="headerlink" title="format 格式化函数"></a>format 格式化函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;&quot;&#123;&#125; &#123;&#125;&quot;.format(&quot;hello&quot;, &quot;world&quot;)    # 不设置指定位置，按默认顺序</span><br><span class="line">&apos;hello world&apos;</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; &quot;&#123;1&#125; &#123;0&#125; &#123;1&#125;&quot;.format(&quot;hello&quot;, &quot;world&quot;)  # 设置指定位置</span><br><span class="line">&apos;world hello world&apos;</span><br></pre></td></tr></table></figure>
+<p>设置参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;网站名：&#123;name&#125;, 地址 &#123;url&#125;&quot;.format(name=&quot;e</span><br><span class="line">书淘&quot;, url=&quot;www.eshutao.cn&quot;))</span><br><span class="line"> </span><br><span class="line"># 通过字典设置参数</span><br><span class="line">site = &#123;&quot;name&quot;: &quot;e书淘&quot;, &quot;url&quot;: &quot;www.eshutao.cn&quot;&#125;</span><br><span class="line">print(&quot;网站名：&#123;name&#125;, 地址 &#123;url&#125;&quot;.format(**site))</span><br><span class="line"> </span><br><span class="line"># 通过列表索引设置参数</span><br><span class="line">my_list = [&apos;e书淘&apos;, &apos;www.eshutao.cn&apos;]</span><br><span class="line">print(&quot;网站名：&#123;0[0]&#125;, 地址 &#123;0[1]&#125;&quot;.format(my_list))  # &quot;0&quot; 是必须的</span><br></pre></td></tr></table></figure></p>
+<p>数字的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print(&quot;&#123;:.2f&#125;&quot;.format(3.1415926));</span><br><span class="line">3.14</span><br></pre></td></tr></table></figure></p>
+<h2 id="Python字符串相关函数"><a href="#Python字符串相关函数" class="headerlink" title="Python字符串相关函数"></a>Python字符串相关函数</h2><ol>
+<li><p><code>count(sub, start= 0,end=len(string))</code><br>统计字符串里某个字符出现的次数。</p>
+</li>
+<li><p><code>decode(encoding=&quot;utf-8&quot;, errors=&quot;strict&quot;)</code><br>以指定的编码格式解码 bytes 对象。默认编码为 ‘utf-8’。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">str = &quot;e书淘&quot;;</span><br><span class="line">str_utf8 = str.encode(&quot;UTF-8&quot;)</span><br><span class="line">str_gbk = str.encode(&quot;GBK&quot;)</span><br><span class="line"></span><br><span class="line">print(str)</span><br><span class="line"></span><br><span class="line">print(&quot;UTF-8 编码：&quot;, str_utf8)</span><br><span class="line">print(&quot;GBK 编码：&quot;, str_gbk)</span><br><span class="line"></span><br><span class="line">print(&quot;UTF-8 解码：&quot;, str_utf8.decode(&apos;UTF-8&apos;,&apos;strict&apos;))</span><br><span class="line">print(&quot;GBK 解码：&quot;, str_gbk.decode(&apos;GBK&apos;,&apos;strict&apos;))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>str.find(str, beg=0, end=len(string))</code><br>检测字符串中是否包含子字符串 str 。若存在，返回索引值；否则返回-1。<br><code>str.index(str, beg=0, end=len(string))</code><br>该方法与 python find()方法一样，只不过如果str不在 string中会报一个异常。</p>
+</li>
+<li><p><code>isalpha()</code><br>如果字符串至少有一个字符并且所有字符都是字母则返回 True, 否则返回 False。</p>
+</li>
+<li><p><code>str.join(sequence)</code><br>将序列中的元素以指定的字符连接生成一个新的字符串。<br>sequence – 要连接的元素序列。可以是字符串、集合、元祖、字典、list</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python3</span><br><span class="line"></span><br><span class="line">s1 = &quot;-&quot;</span><br><span class="line">s2 = &quot;&quot;</span><br><span class="line">seq = (&quot;r&quot;, &quot;u&quot;, &quot;n&quot;, &quot;o&quot;, &quot;o&quot;, &quot;b&quot;) # 字符串序列</span><br><span class="line">print (s1.join( seq ))        #r-u-n-o-o-b</span><br><span class="line">print (s2.join( seq ))        #runoob</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>lower()</code><br>转换字符串中所有大写字符为小写。</p>
+</li>
+<li><code>upper()</code><br>转换字符串中的小写字母为大写。</li>
+<li><code>replace(old, new [, max])</code><br>替换字符串中的字符。</li>
+<li><code>str.split(str=&quot;&quot;, num=string.count(str))</code><br>通过指定分隔符对字符串进行切片,返回字符串列表。</li>
+<li><code>strip([chars])</code><br>在字符串上执行 lstrip()和 rstrip()。<br>删除指定字符串chars；当参数为空时，默认删除空白符（包括’\n’, ‘\r’,  ‘\t’,  ‘ ‘)。</li>
+<li><code>str.ljust(width[, fillchar])</code>与<code>str.rjust(width[, fillchar])</code><br>用指定字符填充字符串。</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+          
+            <a href="/tags/基础语法/" rel="tag"><i class="fa fa-tag"></i> 基础语法</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/09/Python基础-数值（个人笔记）/" rel="next" title="Python基础-数值">
+                <i class="fa fa-chevron-left"></i> Python基础-数值
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/10/Python基础-编码（个人笔记）/" rel="prev" title="Python基础--编码">
+                Python基础--编码 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Xu" />
+            
+              <p class="site-author-name" itemprop="name">Xu</p>
+              <p class="site-description motion-element" itemprop="description">Hello World</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/nixuge0107" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/65d8a15eedcd" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-heartbeat"></i>简书</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python字符串运算符"><span class="nav-number">1.</span> <span class="nav-text">Python字符串运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#格式化字符串"><span class="nav-number">2.</span> <span class="nav-text">格式化字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#类似c语言的方法"><span class="nav-number">2.1.</span> <span class="nav-text">类似c语言的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#format-格式化函数"><span class="nav-number">2.2.</span> <span class="nav-text">format 格式化函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python字符串相关函数"><span class="nav-number">3.</span> <span class="nav-text">Python字符串相关函数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xu</span>
+
+  
+</div>
+
+
+  <div class="powered-by">
+  <span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  </div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共5.2k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":75,"height":150,"hOffset":60},"mobile":{"show":false}});</script></body>
+</html>
