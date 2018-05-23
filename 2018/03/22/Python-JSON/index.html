@@ -86,19 +86,19 @@
 
 
 
-<meta name="description" content="JSON-一种轻量级的数据交换格式。  JSON用途 结构简单，多用于网络数据传输，提高传输效率。 可以直接保存dict。用法12json.dumps(): 对数据进行编码。json.loads(): 对数据进行解码。">
+<meta name="description" content="JSON-一种轻量级的数据交换格式。  JSON用途 结构简单，多用于网络数据传输，提高传输效率。 可以直接保存dict。  用法12json.dumps(): 对数据进行编码。json.loads(): 对数据进行解码。">
 <meta name="keywords" content="Python,基础语法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python-JSON">
 <meta property="og:url" content="http://yoursite.com/2018/03/22/Python-JSON/index.html">
 <meta property="og:site_name" content="Xu&#39;s Blog">
-<meta property="og:description" content="JSON-一种轻量级的数据交换格式。  JSON用途 结构简单，多用于网络数据传输，提高传输效率。 可以直接保存dict。用法12json.dumps(): 对数据进行编码。json.loads(): 对数据进行解码。">
+<meta property="og:description" content="JSON-一种轻量级的数据交换格式。  JSON用途 结构简单，多用于网络数据传输，提高传输效率。 可以直接保存dict。  用法12json.dumps(): 对数据进行编码。json.loads(): 对数据进行解码。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D0%2C24%2C1024%2C675%3Bc0%3Dbaike116%2C5%2C5%2C116%2C38/sign=59971caea318972bb7755a8adbfd57bb/574e9258d109b3de1503c4d2c4bf6c81810a4ccf.jpg">
-<meta property="og:updated_time" content="2018-05-21T16:22:52.389Z">
+<meta property="og:updated_time" content="2018-05-23T14:05:21.001Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python-JSON">
-<meta name="twitter:description" content="JSON-一种轻量级的数据交换格式。  JSON用途 结构简单，多用于网络数据传输，提高传输效率。 可以直接保存dict。用法12json.dumps(): 对数据进行编码。json.loads(): 对数据进行解码。">
+<meta name="twitter:description" content="JSON-一种轻量级的数据交换格式。  JSON用途 结构简单，多用于网络数据传输，提高传输效率。 可以直接保存dict。  用法12json.dumps(): 对数据进行编码。json.loads(): 对数据进行解码。">
 <meta name="twitter:image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D0%2C24%2C1024%2C675%3Bc0%3Dbaike116%2C5%2C5%2C116%2C38/sign=59971caea318972bb7755a8adbfd57bb/574e9258d109b3de1503c4d2c4bf6c81810a4ccf.jpg">
 
 
@@ -376,12 +376,13 @@
 </blockquote>
 <h2 id="JSON用途"><a href="#JSON用途" class="headerlink" title="JSON用途"></a>JSON用途</h2><ol>
 <li>结构简单，多用于网络数据传输，提高传输效率。</li>
-<li>可以直接保存dict。<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">json.dumps(): 对数据进行编码。</span><br><span class="line">json.loads(): 对数据进行解码。</span><br></pre></td></tr></table></figure>
-</li>
+<li>可以直接保存dict。</li>
 </ol>
+<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">json.dumps(): 对数据进行编码。</span><br><span class="line">json.loads(): 对数据进行解码。</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<p>对字符串编解码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python3</span><br><span class="line"></span><br><span class="line">import json</span><br><span class="line"></span><br><span class="line"># Python 字典类型转换为 JSON 对象</span><br><span class="line">data = &#123;</span><br><span class="line">    &apos;name&apos; : &apos;Xu&apos;,</span><br><span class="line">    &apos;age&apos; : 20</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">json_str = json.dumps(data)</span><br><span class="line">print (&quot;原始data：&quot;, repr(data))      #repr(object)  函数将对象转化为供解释器读取的形式。</span><br><span class="line">print (&quot;JSON 对象：&quot;, json_str)</span><br><span class="line"></span><br><span class="line"># 将 JSON 对象转换为 Python 字典</span><br><span class="line">data2 = json.loads(json_str)</span><br><span class="line">print (&quot;data2[&apos;name&apos;]: &quot;, data2[&apos;name&apos;])</span><br><span class="line">print (&quot;data2[&apos;age&apos;]: &quot;, data2[&apos;age&apos;])</span><br></pre></td></tr></table></figure></p>
-<p>对于文件的处理<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 写入 JSON 数据</span><br><span class="line">with open(&apos;data.json&apos;, &apos;w&apos;) as f:</span><br><span class="line">    json.dump(data, f)</span><br><span class="line"></span><br><span class="line"># 读取数据</span><br><span class="line">with open(&apos;data.json&apos;, &apos;r&apos;) as f:</span><br><span class="line">    data = json.load(f)</span><br></pre></td></tr></table></figure></p>
+<p>对字符串编解码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="comment"># Python 字典类型转换为 JSON 对象</span></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">'name'</span> : <span class="string">'Xu'</span>,</span><br><span class="line">    <span class="string">'age'</span> : <span class="number">20</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">json_str = json.dumps(data)</span><br><span class="line"><span class="keyword">print</span> (<span class="string">"原始data："</span>, repr(data))      <span class="comment">#repr(object)  函数将对象转化为供解释器读取的形式。</span></span><br><span class="line"><span class="keyword">print</span> (<span class="string">"JSON 对象："</span>, json_str)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将 JSON 对象转换为 Python 字典</span></span><br><span class="line">data2 = json.loads(json_str)</span><br><span class="line"><span class="keyword">print</span> (<span class="string">"data2['name']: "</span>, data2[<span class="string">'name'</span>])</span><br><span class="line"><span class="keyword">print</span> (<span class="string">"data2['age']: "</span>, data2[<span class="string">'age'</span>])</span><br></pre></td></tr></table></figure>
+<p>对于文件的处理<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 写入 JSON 数据</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'data.json'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    json.dump(data, f)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取数据</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'data.json'</span>, <span class="string">'r'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    data = json.load(f)</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -507,7 +508,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -518,7 +519,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -529,7 +530,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -625,7 +626,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共5.2k字</span>
+  <span class="post-count">博客全站共9.7k字</span>
 </div>
         
 

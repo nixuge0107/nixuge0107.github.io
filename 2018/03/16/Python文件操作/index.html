@@ -86,20 +86,20 @@
 
 
 
-<meta name="description" content="文本文件打开文件1234f = open(&amp;apos;_save_temp.txt&amp;apos;, &amp;apos;r&amp;apos;)f.close()with open(&amp;apos;_save_temp.txt&amp;apos;, &amp;apos;r&amp;apos;) as f: 使用with的优点：可能忘记关闭的句柄。可以进行异常处理。">
+<meta name="description" content="文本文件打开文件1234f = open(&apos;_save_temp.txt&apos;, &apos;r&apos;)f.close()with open(&apos;_save_temp.txt&apos;, &apos;r&apos;) as f: 使用with的优点：可能忘记关闭的句柄。可以进行异常处理。">
 <meta name="keywords" content="Python,基础语法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python文件操作">
 <meta property="og:url" content="http://yoursite.com/2018/03/16/Python文件操作/index.html">
 <meta property="og:site_name" content="Xu&#39;s Blog">
-<meta property="og:description" content="文本文件打开文件1234f = open(&amp;apos;_save_temp.txt&amp;apos;, &amp;apos;r&amp;apos;)f.close()with open(&amp;apos;_save_temp.txt&amp;apos;, &amp;apos;r&amp;apos;) as f: 使用with的优点：可能忘记关闭的句柄。可以进行异常处理。">
+<meta property="og:description" content="文本文件打开文件1234f = open(&apos;_save_temp.txt&apos;, &apos;r&apos;)f.close()with open(&apos;_save_temp.txt&apos;, &apos;r&apos;) as f: 使用with的优点：可能忘记关闭的句柄。可以进行异常处理。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://sudasuta.com/wp-content/uploads/2017/10/Ty-Dale-8.jpg">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3338507-26c3d227bdf4a37a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-05-21T16:24:59.277Z">
+<meta property="og:updated_time" content="2018-05-23T07:05:27.887Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python文件操作">
-<meta name="twitter:description" content="文本文件打开文件1234f = open(&amp;apos;_save_temp.txt&amp;apos;, &amp;apos;r&amp;apos;)f.close()with open(&amp;apos;_save_temp.txt&amp;apos;, &amp;apos;r&amp;apos;) as f: 使用with的优点：可能忘记关闭的句柄。可以进行异常处理。">
+<meta name="twitter:description" content="文本文件打开文件1234f = open(&apos;_save_temp.txt&apos;, &apos;r&apos;)f.close()with open(&apos;_save_temp.txt&apos;, &apos;r&apos;) as f: 使用with的优点：可能忘记关闭的句柄。可以进行异常处理。">
 <meta name="twitter:image" content="http://sudasuta.com/wp-content/uploads/2017/10/Ty-Dale-8.jpg">
 
 
@@ -372,12 +372,12 @@
 
       
         <p><img src="http://sudasuta.com/wp-content/uploads/2017/10/Ty-Dale-8.jpg" alt="python"></p>
-<h2 id="文本文件"><a href="#文本文件" class="headerlink" title="文本文件"></a>文本文件</h2><h3 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">f = open(&apos;_save_temp.txt&apos;, &apos;r&apos;)</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line">with open(&apos;_save_temp.txt&apos;, &apos;r&apos;) as f:</span><br></pre></td></tr></table></figure>
+<h2 id="文本文件"><a href="#文本文件" class="headerlink" title="文本文件"></a>文本文件</h2><h3 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">'_save_temp.txt'</span>, <span class="string">'r'</span>)</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'_save_temp.txt'</span>, <span class="string">'r'</span>) <span class="keyword">as</span> f:</span><br></pre></td></tr></table></figure>
 <p>使用with的优点：<br>可能忘记关闭的句柄。<br>可以进行异常处理。</p>
 <a id="more"></a>
 <h3 id="文件打开模式"><a href="#文件打开模式" class="headerlink" title="文件打开模式"></a>文件打开模式</h3><p><img src="https://upload-images.jianshu.io/upload_images/3338507-26c3d227bdf4a37a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="文件打开模式"></p>
-<h3 id="读写文件"><a href="#读写文件" class="headerlink" title="读写文件"></a>读写文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">f.write()</span><br><span class="line">f.writelines([str])    #写入多行</span><br><span class="line">f.read(num)            #读取指定多的字节，若无参数将尽可能多的读取文件内容。</span><br><span class="line">f.readlines()          #读取所有行并返回列表。</span><br></pre></td></tr></table></figure>
-<h2 id="os操作文件"><a href="#os操作文件" class="headerlink" title="os操作文件"></a>os操作文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#重命名文件</span><br><span class="line">os.rename(current_file_name, new_file_name)</span><br><span class="line">#删除文件</span><br><span class="line">os.remove(file_name)</span><br><span class="line">#创建文件夹</span><br><span class="line">os.mkdir(&quot;newdir&quot;)</span><br><span class="line">#显示当前的工作目录</span><br><span class="line">os.getcwd()</span><br><span class="line">#删除目录</span><br><span class="line">os.rmdir(&apos;dirname&apos;)</span><br></pre></td></tr></table></figure>
+<h3 id="读写文件"><a href="#读写文件" class="headerlink" title="读写文件"></a>读写文件</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">f.write()</span><br><span class="line">f.writelines([str])    <span class="comment">#写入多行</span></span><br><span class="line">f.read(num)            <span class="comment">#读取指定多的字节，若无参数将尽可能多的读取文件内容。</span></span><br><span class="line">f.readlines()          <span class="comment">#读取所有行并返回列表。</span></span><br></pre></td></tr></table></figure>
+<h2 id="os操作文件"><a href="#os操作文件" class="headerlink" title="os操作文件"></a>os操作文件</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#重命名文件</span></span><br><span class="line">os.rename(current_file_name, new_file_name)</span><br><span class="line"><span class="comment">#删除文件</span></span><br><span class="line">os.remove(file_name)</span><br><span class="line"><span class="comment">#创建文件夹</span></span><br><span class="line">os.mkdir(<span class="string">"newdir"</span>)</span><br><span class="line"><span class="comment">#显示当前的工作目录</span></span><br><span class="line">os.getcwd()</span><br><span class="line"><span class="comment">#删除目录</span></span><br><span class="line">os.rmdir(<span class="string">'dirname'</span>)</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -503,7 +503,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -514,7 +514,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -525,7 +525,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -621,7 +621,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共5.2k字</span>
+  <span class="post-count">博客全站共9.7k字</span>
 </div>
         
 
