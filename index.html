@@ -301,6 +301,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/微信小程序/" itemprop="url" rel="index">
+                    <span itemprop="name">微信小程序</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -348,28 +370,16 @@
 
       
         
-          
-            <p><img src="https://github.com/nixuge0107/MarkdownImages/blob/master/%E5%88%86%E7%B1%BB%E5%9B%9B-2LG14.jpg?raw=true" alt="微信小程序"></p>
+          <p><img src="https://github.com/nixuge0107/MarkdownImages/blob/master/%E5%88%86%E7%B1%BB%E4%B8%83-Cloud9-1.jpg?raw=true" alt="微信小程序"></p>
 <p>最近在做微信小程序，在这里遇到了坑，填一下。</p>
 <h1 id="初始文件util-js"><a href="#初始文件util-js" class="headerlink" title="初始文件util.js"></a>初始文件util.js</h1><p>微信小程序创建好的初始文件中含有<code>util.js</code>这个文件，包含了<code>formatTime</code>与<code>formatNumber</code>这两个文件，分别解释一下。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const formatNumber = n =&gt; &#123;</span><br><span class="line">  n = n.toString()</span><br><span class="line">  return n[1] ? n : &apos;0&apos; + n</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><code>formatTime</code>是将数字转化为字符串，如果数字只有一位不填0,否则加上0。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const formatTime = date =&gt; &#123;</span><br><span class="line">  const year = date.getFullYear()</span><br><span class="line">  const month = date.getMonth() + 1</span><br><span class="line">  const day = date.getDate()</span><br><span class="line">  const hour = date.getHours()</span><br><span class="line">  const minute = date.getMinutes()</span><br><span class="line">  const second = date.getSeconds()</span><br><span class="line"></span><br><span class="line">  return [year, month, day].map(formatNumber).join(&apos;/&apos;) + &apos; &apos; + [hour, minute, second].map(formatNumber).join(&apos;:&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><code>formatNumber</code>中输入的数据是<code>date</code>，通过<code>get*</code>函数得到年月日时分秒（数字），通过字符串的格式化得到<code>2011/11/11 00:00:00</code>的形式。</p>
-<p>包含两个重要函数：</p>
-<blockquote>
-<p><code>map()</code>是一个常用的函数。<br>输入一个数组，将对应的函数依次调用数组内的数据，返回一个新的数组。</p>
-</blockquote>
-<blockquote>
-<p><code>join()</code>函数是将所有元素依次放入字符串，并通过指定的分隔符进行分隔。</p>
-</blockquote>
-<h1 id="获得时间"><a href="#获得时间" class="headerlink" title="获得时间"></a>获得时间</h1><p>js中通常用<code>new Date()</code>来获得当前时间。<br>当函数没有传入值时，默认把当前的时间和日期保存为其初始值。</p>
-<h1 id="计算天数差"><a href="#计算天数差" class="headerlink" title="计算天数差"></a>计算天数差</h1><p>计算两个日期中的天数差：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const getDiffDay = (date1, date2) =&gt; &#123;</span><br><span class="line">  var diff = Math.abs(date1.getTime() - date2.getTime())</span><br><span class="line">  return diff / 86400000</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><code>date</code>对象通过<code>getTime()</code>函数得到其时间戳，通过它可以很方便的得到时间差。</p>
-<h1 id="将字符转化为date格式"><a href="#将字符转化为date格式" class="headerlink" title="将字符转化为date格式"></a>将字符转化为date格式</h1><p>在js中，将字符串以<code>2008-08-08 00:00:00</code>的形式输入至<code>new Date()</code>就可以返回指定时间的<code>date</code>。</p>
-<p>不过小程序中遇到很大的坑，在小程序本地测试中，使用<code>2008-08-08 00:00:00</code>格式传入<code>new Date()</code>中正常，当进行远程预览时却返回<code>null</code>，据说只在iOS中会出现这种问题。</p>
-<p>根据<a href="https://blog.csdn.net/cx091/article/details/78900491" target="_blank" rel="noopener">微信小程序开发问题-ios的Date问题</a>中的解决办法，<strong>通过传入<code>2008-08-08T00:00:00</code>这种格式来解决。</strong></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/14/微信小程序-时间处理/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2035,7 +2045,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2046,7 +2056,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

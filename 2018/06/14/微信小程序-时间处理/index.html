@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="微信小程序,JavaScript," />
 
 
 
@@ -86,19 +86,20 @@
 
 
 
-<meta name="description" content="最近在做微信小程序，在这里遇到了坑，填一下。 初始文件util.js微信小程序创建好的初始文件中含有util.js这个文件，包含了formatTime与formatNumber这两个文件，分别解释一下。 1234const formatNumber = n =&amp;gt; &amp;#123;  n = n.toString()  return n[1] ? n : &amp;apos;0&amp;apos; + n&amp;#1">
+<meta name="description" content="最近在做微信小程序，在这里遇到了坑，填一下。 初始文件util.js微信小程序创建好的初始文件中含有util.js这个文件，包含了formatTime与formatNumber这两个文件，分别解释一下。">
+<meta name="keywords" content="微信小程序,JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微信小程序-时间处理">
 <meta property="og:url" content="http://yoursite.com/2018/06/14/微信小程序-时间处理/index.html">
 <meta property="og:site_name" content="Xu&#39;s Blog">
-<meta property="og:description" content="最近在做微信小程序，在这里遇到了坑，填一下。 初始文件util.js微信小程序创建好的初始文件中含有util.js这个文件，包含了formatTime与formatNumber这两个文件，分别解释一下。 1234const formatNumber = n =&amp;gt; &amp;#123;  n = n.toString()  return n[1] ? n : &amp;apos;0&amp;apos; + n&amp;#1">
+<meta property="og:description" content="最近在做微信小程序，在这里遇到了坑，填一下。 初始文件util.js微信小程序创建好的初始文件中含有util.js这个文件，包含了formatTime与formatNumber这两个文件，分别解释一下。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://github.com/nixuge0107/MarkdownImages/blob/master/%E5%88%86%E7%B1%BB%E5%9B%9B-2LG14.jpg?raw=true">
-<meta property="og:updated_time" content="2018-06-14T12:18:11.003Z">
+<meta property="og:image" content="https://github.com/nixuge0107/MarkdownImages/blob/master/%E5%88%86%E7%B1%BB%E4%B8%83-Cloud9-1.jpg?raw=true">
+<meta property="og:updated_time" content="2018-06-14T13:15:24.282Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信小程序-时间处理">
-<meta name="twitter:description" content="最近在做微信小程序，在这里遇到了坑，填一下。 初始文件util.js微信小程序创建好的初始文件中含有util.js这个文件，包含了formatTime与formatNumber这两个文件，分别解释一下。 1234const formatNumber = n =&amp;gt; &amp;#123;  n = n.toString()  return n[1] ? n : &amp;apos;0&amp;apos; + n&amp;#1">
-<meta name="twitter:image" content="https://github.com/nixuge0107/MarkdownImages/blob/master/%E5%88%86%E7%B1%BB%E5%9B%9B-2LG14.jpg?raw=true">
+<meta name="twitter:description" content="最近在做微信小程序，在这里遇到了坑，填一下。 初始文件util.js微信小程序创建好的初始文件中含有util.js这个文件，包含了formatTime与formatNumber这两个文件，分别解释一下。">
+<meta name="twitter:image" content="https://github.com/nixuge0107/MarkdownImages/blob/master/%E5%88%86%E7%B1%BB%E4%B8%83-Cloud9-1.jpg?raw=true">
 
 
 
@@ -301,6 +302,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/微信小程序/" itemprop="url" rel="index">
+                    <span itemprop="name">微信小程序</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -347,9 +370,10 @@
       
 
       
-        <p><img src="https://github.com/nixuge0107/MarkdownImages/blob/master/%E5%88%86%E7%B1%BB%E5%9B%9B-2LG14.jpg?raw=true" alt="微信小程序"></p>
+        <p><img src="https://github.com/nixuge0107/MarkdownImages/blob/master/%E5%88%86%E7%B1%BB%E4%B8%83-Cloud9-1.jpg?raw=true" alt="微信小程序"></p>
 <p>最近在做微信小程序，在这里遇到了坑，填一下。</p>
 <h1 id="初始文件util-js"><a href="#初始文件util-js" class="headerlink" title="初始文件util.js"></a>初始文件util.js</h1><p>微信小程序创建好的初始文件中含有<code>util.js</code>这个文件，包含了<code>formatTime</code>与<code>formatNumber</code>这两个文件，分别解释一下。</p>
+<a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const formatNumber = n =&gt; &#123;</span><br><span class="line">  n = n.toString()</span><br><span class="line">  return n[1] ? n : &apos;0&apos; + n</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><code>formatTime</code>是将数字转化为字符串，如果数字只有一位不填0,否则加上0。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const formatTime = date =&gt; &#123;</span><br><span class="line">  const year = date.getFullYear()</span><br><span class="line">  const month = date.getMonth() + 1</span><br><span class="line">  const day = date.getDate()</span><br><span class="line">  const hour = date.getHours()</span><br><span class="line">  const minute = date.getMinutes()</span><br><span class="line">  const second = date.getSeconds()</span><br><span class="line"></span><br><span class="line">  return [year, month, day].map(formatNumber).join(&apos;/&apos;) + &apos; &apos; + [hour, minute, second].map(formatNumber).join(&apos;:&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><code>formatNumber</code>中输入的数据是<code>date</code>，通过<code>get*</code>函数得到年月日时分秒（数字），通过字符串的格式化得到<code>2011/11/11 00:00:00</code>的形式。</p>
@@ -380,6 +404,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/微信小程序/" rel="tag"><i class="fa fa-tag"></i> 微信小程序</a>
+          
+            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+          
+        </div>
       
 
       
@@ -490,7 +522,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -501,7 +533,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
