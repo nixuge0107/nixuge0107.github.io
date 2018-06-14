@@ -63,10 +63,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/xiaoji_32.ico?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/xu_logo_32.ico?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/xiaoji_16.ico?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/xu_logo_16.ico?v=5.1.4">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
@@ -86,19 +86,19 @@
 
 
 
-<meta name="description" content="目录 TensorFlow-简介 TensorFlow-图片的预处理 TensorFlow-模型的建立 TensorFlow-模型的训练 TensorFlow-模型的验证   目标 理解模型的输入和输出是什么 图片预处理的步骤 相关代码  模型的输入和输出在TensorFlow-训练自己的图片(机器学习了解)中我们知道了模型属于分类模型，也就是我输入一个图片（RGB/灰度图），可以输出一个标签l">
+<meta name="description" content="目录 TensorFlow-简介 TensorFlow-图片的预处理 TensorFlow-模型的建立 TensorFlow-模型的训练 TensorFlow-模型的验证   目标 理解模型的输入和输出是什么 图片预处理的步骤 相关代码  模型的输入和输出">
 <meta name="keywords" content="TensorFlow">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TensorFlow-训练自己的图片(图片预处理)">
 <meta property="og:url" content="http://yoursite.com/2018/05/23/TensorFlow-训练自己的图片（二）/index.html">
 <meta property="og:site_name" content="Xu&#39;s Blog">
-<meta property="og:description" content="目录 TensorFlow-简介 TensorFlow-图片的预处理 TensorFlow-模型的建立 TensorFlow-模型的训练 TensorFlow-模型的验证   目标 理解模型的输入和输出是什么 图片预处理的步骤 相关代码  模型的输入和输出在TensorFlow-训练自己的图片(机器学习了解)中我们知道了模型属于分类模型，也就是我输入一个图片（RGB/灰度图），可以输出一个标签l">
+<meta property="og:description" content="目录 TensorFlow-简介 TensorFlow-图片的预处理 TensorFlow-模型的建立 TensorFlow-模型的训练 TensorFlow-模型的验证   目标 理解模型的输入和输出是什么 图片预处理的步骤 相关代码  模型的输入和输出">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://sudasuta.com/wp-content/uploads/2017/09/Andererseits-2.jpg">
-<meta property="og:updated_time" content="2018-05-23T15:37:20.442Z">
+<meta property="og:updated_time" content="2018-05-23T16:01:47.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TensorFlow-训练自己的图片(图片预处理)">
-<meta name="twitter:description" content="目录 TensorFlow-简介 TensorFlow-图片的预处理 TensorFlow-模型的建立 TensorFlow-模型的训练 TensorFlow-模型的验证   目标 理解模型的输入和输出是什么 图片预处理的步骤 相关代码  模型的输入和输出在TensorFlow-训练自己的图片(机器学习了解)中我们知道了模型属于分类模型，也就是我输入一个图片（RGB/灰度图），可以输出一个标签l">
+<meta name="twitter:description" content="目录 TensorFlow-简介 TensorFlow-图片的预处理 TensorFlow-模型的建立 TensorFlow-模型的训练 TensorFlow-模型的验证   目标 理解模型的输入和输出是什么 图片预处理的步骤 相关代码  模型的输入和输出">
 <meta name="twitter:image" content="http://sudasuta.com/wp-content/uploads/2017/09/Andererseits-2.jpg">
 
 
@@ -372,11 +372,11 @@
       
         <p><img src="http://sudasuta.com/wp-content/uploads/2017/09/Andererseits-2.jpg" alt="tensorflow"></p>
 <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ol>
-<li><a href="../2018/05/22/TensorFlow-训练自己的图片/">TensorFlow-简介</a></li>
+<li><a href="https://nixuge0107.github.io/2018/05/22/TensorFlow-训练自己的图片/" target="_blank" rel="noopener">TensorFlow-简介</a></li>
 <li>TensorFlow-图片的预处理</li>
-<li><a href="../2018/05/23/TensorFlow-训练自己的图片（三）/">TensorFlow-模型的建立</a></li>
-<li><a href="../2018/05/23/TensorFlow-训练自己的图片（四）/">TensorFlow-模型的训练</a></li>
-<li><a href="../2018/05/23/TensorFlow-训练自己的图片（五）/">TensorFlow-模型的验证</a></li>
+<li><a href="https://nixuge0107.github.io/2018/05/23/TensorFlow-训练自己的图片（三）/" target="_blank" rel="noopener">TensorFlow-模型的建立</a></li>
+<li><a href="https://nixuge0107.github.io/2018/05/23/TensorFlow-训练自己的图片（四）/" target="_blank" rel="noopener">TensorFlow-模型的训练</a></li>
+<li><a href="https://nixuge0107.github.io/2018/05/23/TensorFlow-训练自己的图片（五）/" target="_blank" rel="noopener">TensorFlow-模型的验证</a></li>
 </ol>
 <hr>
 <h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><ol>
@@ -384,8 +384,8 @@
 <li>图片预处理的步骤</li>
 <li>相关代码</li>
 </ol>
-<h1 id="模型的输入和输出"><a href="#模型的输入和输出" class="headerlink" title="模型的输入和输出"></a>模型的输入和输出</h1><p>在<a href="../2018/05/22/TensorFlow-训练自己的图片/">TensorFlow-训练自己的图片(机器学习了解)</a>中我们知道了模型属于分类模型，也就是我输入一个图片（RGB/灰度图），可以输出一个标签label，本问题中分别用int类型的0,1,2分别代表三角、圆、矩形。</p>
-<a id="more"></a>
+<h1 id="模型的输入和输出"><a href="#模型的输入和输出" class="headerlink" title="模型的输入和输出"></a>模型的输入和输出</h1><a id="more"></a>
+<p>在<a href="https://nixuge0107.github.io/2018/05/22/TensorFlow-训练自己的图片/" target="_blank" rel="noopener">TensorFlow-训练自己的图片(机器学习了解)</a>中我们知道了模型属于分类模型，也就是我输入一个图片（RGB/灰度图），可以输出一个标签label，本问题中分别用int类型的0,1,2分别代表三角、圆、矩形。</p>
 <p>所以如果我们的图片像素为64&times;64，RGB图像，那么输入应为[64&times;64&times;3]大小的像素点数据；输出为0,1,2。</p>
 <p>不过，简单了解过机器学习的人会知道，我们每次会把许多(<code>bitch_size</code>)个图片同时放到内存中去使训练时更容易收敛，所以我们应该将图片返回一个list[bitch_size,64&times;64&times;3],label返回一个[bitch_size,2]的list。<br>bitch_size不明白看这里<a href="https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&amp;mid=2247484570&amp;idx=1&amp;sn=4c0b6b76a7f2518d77818535b677e087&amp;chksm=970c2c4ca07ba55ad5cfe6b46f72dbef85a159574fb60b9932404e45747c95eed8c6c0f66d62#rd" target="_blank" rel="noopener">传送门</a>。</p>
 <h1 id="图片预处理"><a href="#图片预处理" class="headerlink" title="图片预处理"></a>图片预处理</h1><h2 id="读取图片路径"><a href="#读取图片路径" class="headerlink" title="读取图片路径"></a>读取图片路径</h2><p>先上代码<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_files</span><span class="params">(file_dir, ratio)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    读入图片，按比例输出训练集和验证集</span></span><br><span class="line"><span class="string">    :param file_dir: 图片路径名</span></span><br><span class="line"><span class="string">    :param ratio: 验证集的比例（分数）</span></span><br><span class="line"><span class="string">    :return: 训练集图片和标签的list，验证集图片和标签的list</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> os.listdir(file_dir + <span class="string">'/triangle'</span>):</span><br><span class="line">        triangle.append(file_dir + <span class="string">'/triangle'</span> + <span class="string">'/'</span> + file)</span><br><span class="line">        label_triangle.append(<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> os.listdir(file_dir + <span class="string">'/circle'</span>):</span><br><span class="line">        circle.append(file_dir + <span class="string">'/circle'</span> + <span class="string">'/'</span> + file)</span><br><span class="line">        label_circle.append(<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> os.listdir(file_dir + <span class="string">'/rectangle'</span>):</span><br><span class="line">        rectangle.append(file_dir + <span class="string">'/rectangle'</span> + <span class="string">'/'</span> + file)</span><br><span class="line">        label_rectangle.append(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># step2：对生成的图片路径和标签List做打乱处理把cat和dog合起来组成一个list（img和lab）</span></span><br><span class="line">    image_list = np.hstack((circle, rectangle, triangle))</span><br><span class="line">    label_list = np.hstack((label_circle, label_rectangle, label_triangle))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 利用shuffle打乱顺序</span></span><br><span class="line">    temp = np.array([image_list, label_list])</span><br><span class="line">    temp = temp.transpose()</span><br><span class="line">    np.random.shuffle(temp)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 从打乱的temp中再取出list（img和lab）</span></span><br><span class="line">    <span class="comment"># image_list = list(temp[:, 0])</span></span><br><span class="line">    <span class="comment"># label_list = list(temp[:, 1])</span></span><br><span class="line">    <span class="comment"># label_list = [int(i) for i in label_list]</span></span><br><span class="line">    <span class="comment"># return image_list, label_list</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将所有的img和lab转换成list</span></span><br><span class="line">    all_image_list = list(temp[:, <span class="number">0</span>])</span><br><span class="line">    all_label_list = list(temp[:, <span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将所得List分为两部分，一部分用来训练tra，一部分用来测试val</span></span><br><span class="line">    <span class="comment"># ratio是测试集的比例</span></span><br><span class="line">    n_sample = len(all_label_list)</span><br><span class="line">    n_val = int(math.ceil(n_sample * ratio))  <span class="comment"># 测试样本数</span></span><br><span class="line">    n_train = n_sample - n_val  <span class="comment"># 训练样本数</span></span><br><span class="line"></span><br><span class="line">    tra_images = all_image_list[<span class="number">0</span>:n_train]</span><br><span class="line">    tra_labels = all_label_list[<span class="number">0</span>:n_train]</span><br><span class="line">    tra_labels = [int(float(i)) <span class="keyword">for</span> i <span class="keyword">in</span> tra_labels]</span><br><span class="line">    val_images = all_image_list[n_train:<span class="number">-1</span>]</span><br><span class="line">    val_labels = all_label_list[n_train:<span class="number">-1</span>]</span><br><span class="line">    val_labels = [int(float(i)) <span class="keyword">for</span> i <span class="keyword">in</span> val_labels]</span><br><span class="line"></span><br><span class="line">    print(<span class="string">"训练个数：%d"</span>, n_train)</span><br><span class="line">    print(<span class="string">"测试个数：%d"</span>, n_val)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> tra_images, tra_labels, val_images, val_labels</span><br></pre></td></tr></table></figure></p>
@@ -517,7 +517,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -635,7 +635,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共9.7k字</span>
+  <span class="post-count">博客全站共10.2k字</span>
 </div>
         
 

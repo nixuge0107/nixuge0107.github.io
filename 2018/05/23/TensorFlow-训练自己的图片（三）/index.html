@@ -63,10 +63,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/xiaoji_32.ico?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/xu_logo_32.ico?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/xiaoji_16.ico?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/xu_logo_16.ico?v=5.1.4">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
@@ -86,19 +86,19 @@
 
 
 
-<meta name="description" content="目录 TensorFlow-简介 TensorFlow-图片的预处理 TensorFlow-模型的建立 TensorFlow-模型的训练 TensorFlow-模型的验证   目标：小白一枚，对于神经网络各卷积层不是很理解，本文着重于如何通过TensorFlow实现自己的模型  模型的输入输出和各节点 loss及accuracy计算 optimizer优化器    模型的各个节点对于一个神经网络">
+<meta name="description" content="目录 TensorFlow-简介 TensorFlow-图片的预处理 TensorFlow-模型的建立 TensorFlow-模型的训练 TensorFlow-模型的验证   目标：小白一枚，对于神经网络各卷积层不是很理解，本文着重于如何通过TensorFlow实现自己的模型  模型的输入输出和各节点 loss及accuracy计算 optimizer优化器    模型的各个节点">
 <meta name="keywords" content="TensorFlow">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TensorFlow-模型的建立">
 <meta property="og:url" content="http://yoursite.com/2018/05/23/TensorFlow-训练自己的图片（三）/index.html">
 <meta property="og:site_name" content="Xu&#39;s Blog">
-<meta property="og:description" content="目录 TensorFlow-简介 TensorFlow-图片的预处理 TensorFlow-模型的建立 TensorFlow-模型的训练 TensorFlow-模型的验证   目标：小白一枚，对于神经网络各卷积层不是很理解，本文着重于如何通过TensorFlow实现自己的模型  模型的输入输出和各节点 loss及accuracy计算 optimizer优化器    模型的各个节点对于一个神经网络">
+<meta property="og:description" content="目录 TensorFlow-简介 TensorFlow-图片的预处理 TensorFlow-模型的建立 TensorFlow-模型的训练 TensorFlow-模型的验证   目标：小白一枚，对于神经网络各卷积层不是很理解，本文着重于如何通过TensorFlow实现自己的模型  模型的输入输出和各节点 loss及accuracy计算 optimizer优化器    模型的各个节点">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://sudasuta.com/wp-content/uploads/2017/09/Andererseits-4.jpg">
-<meta property="og:updated_time" content="2018-05-23T15:36:42.405Z">
+<meta property="og:updated_time" content="2018-05-23T16:01:58.359Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TensorFlow-模型的建立">
-<meta name="twitter:description" content="目录 TensorFlow-简介 TensorFlow-图片的预处理 TensorFlow-模型的建立 TensorFlow-模型的训练 TensorFlow-模型的验证   目标：小白一枚，对于神经网络各卷积层不是很理解，本文着重于如何通过TensorFlow实现自己的模型  模型的输入输出和各节点 loss及accuracy计算 optimizer优化器    模型的各个节点对于一个神经网络">
+<meta name="twitter:description" content="目录 TensorFlow-简介 TensorFlow-图片的预处理 TensorFlow-模型的建立 TensorFlow-模型的训练 TensorFlow-模型的验证   目标：小白一枚，对于神经网络各卷积层不是很理解，本文着重于如何通过TensorFlow实现自己的模型  模型的输入输出和各节点 loss及accuracy计算 optimizer优化器    模型的各个节点">
 <meta name="twitter:image" content="http://sudasuta.com/wp-content/uploads/2017/09/Andererseits-4.jpg">
 
 
@@ -372,11 +372,11 @@
       
         <p><img src="http://sudasuta.com/wp-content/uploads/2017/09/Andererseits-4.jpg" alt="tensorflow"></p>
 <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ol>
-<li><a href="../2018/05/22/TensorFlow-训练自己的图片/">TensorFlow-简介</a></li>
-<li><a href="../2018/05/23/TensorFlow-训练自己的图片（二）/">TensorFlow-图片的预处理</a></li>
+<li><a href="https://nixuge0107.github.io/2018/05/22/TensorFlow-训练自己的图片/" target="_blank" rel="noopener">TensorFlow-简介</a></li>
+<li><a href="https://nixuge0107.github.io/2018/05/23/TensorFlow-训练自己的图片（二）/" target="_blank" rel="noopener">TensorFlow-图片的预处理</a></li>
 <li>TensorFlow-模型的建立</li>
-<li><a href="../2018/05/23/TensorFlow-训练自己的图片（四）/">TensorFlow-模型的训练</a></li>
-<li><a href="../2018/05/23/TensorFlow-训练自己的图片（五）/">TensorFlow-模型的验证</a></li>
+<li><a href="https://nixuge0107.github.io/2018/05/23/TensorFlow-训练自己的图片（四）/" target="_blank" rel="noopener">TensorFlow-模型的训练</a></li>
+<li><a href="https://nixuge0107.github.io/2018/05/23/TensorFlow-训练自己的图片（五）/" target="_blank" rel="noopener">TensorFlow-模型的验证</a></li>
 </ol>
 <hr>
 <h1 id="目标："><a href="#目标：" class="headerlink" title="目标："></a>目标：</h1><p><strong>小白一枚，对于神经网络各卷积层不是很理解，本文着重于如何通过TensorFlow实现自己的模型</strong></p>
@@ -385,14 +385,14 @@
 <li><code>loss</code>及<code>accuracy</code>计算</li>
 <li><code>optimizer</code>优化器  </li>
 </ol>
-<h1 id="模型的各个节点"><a href="#模型的各个节点" class="headerlink" title="模型的各个节点"></a>模型的各个节点</h1><p>对于一个神经网络，节点(op)可以看做是神经元,多个节点连接而成graph（图），也就是我们需要建立的模型。</p>
+<h1 id="模型的各个节点"><a href="#模型的各个节点" class="headerlink" title="模型的各个节点"></a>模型的各个节点</h1><a id="more"></a>
+<p>对于一个神经网络，节点(op)可以看做是神经元,多个节点连接而成graph（图），也就是我们需要建立的模型。</p>
 <p>整个过程可以简化为tensor通过graph计算，最终得到我们需要的数据（各个label的概率）。</p>
 <p>所以整个网络是由一个个节点构成的，我们所搭建的模型也是这样。</p>
-<a id="more"></a>
 <h2 id="输入节点"><a href="#输入节点" class="headerlink" title="输入节点"></a>输入节点</h2><h3 id="什么是占位符placeholder？"><a href="#什么是占位符placeholder？" class="headerlink" title="什么是占位符placeholder？"></a>什么是占位符<code>placeholder</code>？</h3><blockquote>
 <p>placeholer是Tnesorflow的占位符节点，由placeholder方法创建，也是一种常量。可以在模型运行时进行传参。</p>
 </blockquote>
-<p>简单来讲，我们在模型运行时可以把<a href="../2018/05/23/TensorFlow-训练自己的图片（二）/">TensorFlow-训练自己的图片(图片预处理)</a>得到的<code>batch_x</code>传入输入，<code>batch_y</code>传入训练的结果，通过传入不同的数据进行训练；同时把他当做模型预测的输入端，把图片传递给<code>placeholder</code>就可以进行预测。</p>
+<p>简单来讲，我们在模型运行时可以把<a href="https://nixuge0107.github.io/2018/05/23/TensorFlow-训练自己的图片（二）/" target="_blank" rel="noopener">TensorFlow-训练自己的图片(图片预处理)</a>得到的<code>batch_x</code>传入输入，<code>batch_y</code>传入训练的结果，通过传入不同的数据进行训练；同时把他当做模型预测的输入端，把图片传递给<code>placeholder</code>就可以进行预测。</p>
 <p>我们可以定义全局的<code>placeholder</code>节点进行传参<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X = tf.placeholder(tf.float32, [<span class="keyword">None</span>, <span class="number">64</span> * <span class="number">64</span> * <span class="number">3</span>], name=<span class="string">'input'</span>)</span><br><span class="line">Y = tf.placeholder(tf.int64, shape=[<span class="keyword">None</span>], name=<span class="string">'labels_placeholder'</span>)</span><br></pre></td></tr></table></figure></p>
 <h2 id="softmax节点"><a href="#softmax节点" class="headerlink" title="softmax节点"></a>softmax节点</h2><blockquote>
 <p>softmax用于多分类过程中，它将多个神经元的输出，映射到（0,1）区间内，可以看成概率来理解，从而来进行多分类！</p>
@@ -527,7 +527,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -645,7 +645,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共9.7k字</span>
+  <span class="post-count">博客全站共10.2k字</span>
 </div>
         
 

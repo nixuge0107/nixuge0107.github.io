@@ -63,10 +63,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/xiaoji_32.ico?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/xu_logo_32.ico?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/xiaoji_16.ico?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/xu_logo_16.ico?v=5.1.4">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
@@ -86,19 +86,19 @@
 
 
 
-<meta name="description" content="目录 TensorFlow-简介 TensorFlow-图片的预处理 TensorFlow-模型的建立 TensorFlow-模型的训练 TensorFlow-模型的验证   目标 TensorFlow-Session会话 训练的流程2.1  初始化2.2  循环训练2.3  保存模型  TensorFlow-Session在会话中载入图你有没有想过，Python作为解释性语言速度是很慢的，如何">
+<meta name="description" content="目录 TensorFlow-简介 TensorFlow-图片的预处理 TensorFlow-模型的建立 TensorFlow-模型的训练 TensorFlow-模型的验证   目标 TensorFlow-Session会话 训练的流程2.1  初始化2.2  循环训练2.3  保存模型  TensorFlow-Session">
 <meta name="keywords" content="TensorFlow">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TensorFlow-训练并保存模型">
 <meta property="og:url" content="http://yoursite.com/2018/05/23/TensorFlow-训练自己的图片（四）/index.html">
 <meta property="og:site_name" content="Xu&#39;s Blog">
-<meta property="og:description" content="目录 TensorFlow-简介 TensorFlow-图片的预处理 TensorFlow-模型的建立 TensorFlow-模型的训练 TensorFlow-模型的验证   目标 TensorFlow-Session会话 训练的流程2.1  初始化2.2  循环训练2.3  保存模型  TensorFlow-Session在会话中载入图你有没有想过，Python作为解释性语言速度是很慢的，如何">
+<meta property="og:description" content="目录 TensorFlow-简介 TensorFlow-图片的预处理 TensorFlow-模型的建立 TensorFlow-模型的训练 TensorFlow-模型的验证   目标 TensorFlow-Session会话 训练的流程2.1  初始化2.2  循环训练2.3  保存模型  TensorFlow-Session">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://sudasuta.com/wp-content/uploads/2017/09/Andererseits-5.jpg">
-<meta property="og:updated_time" content="2018-05-23T15:38:37.466Z">
+<meta property="og:updated_time" content="2018-05-23T16:01:20.305Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TensorFlow-训练并保存模型">
-<meta name="twitter:description" content="目录 TensorFlow-简介 TensorFlow-图片的预处理 TensorFlow-模型的建立 TensorFlow-模型的训练 TensorFlow-模型的验证   目标 TensorFlow-Session会话 训练的流程2.1  初始化2.2  循环训练2.3  保存模型  TensorFlow-Session在会话中载入图你有没有想过，Python作为解释性语言速度是很慢的，如何">
+<meta name="twitter:description" content="目录 TensorFlow-简介 TensorFlow-图片的预处理 TensorFlow-模型的建立 TensorFlow-模型的训练 TensorFlow-模型的验证   目标 TensorFlow-Session会话 训练的流程2.1  初始化2.2  循环训练2.3  保存模型  TensorFlow-Session">
 <meta name="twitter:image" content="http://sudasuta.com/wp-content/uploads/2017/09/Andererseits-5.jpg">
 
 
@@ -372,20 +372,20 @@
       
         <p><img src="http://sudasuta.com/wp-content/uploads/2017/09/Andererseits-5.jpg" alt="tensorflow"></p>
 <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ol>
-<li><a href="../2018/05/22/TensorFlow-训练自己的图片/">TensorFlow-简介</a></li>
-<li><a href="../2018/05/23/TensorFlow-训练自己的图片（二）/">TensorFlow-图片的预处理</a></li>
-<li><a href="../2018/05/23/TensorFlow-训练自己的图片（三）/">TensorFlow-模型的建立</a></li>
+<li><a href="https://nixuge0107.github.io/2018/05/22/TensorFlow-训练自己的图片/" target="_blank" rel="noopener">TensorFlow-简介</a></li>
+<li><a href="https://nixuge0107.github.io/2018/05/23/TensorFlow-训练自己的图片（二）/" target="_blank" rel="noopener">TensorFlow-图片的预处理</a></li>
+<li><a href="https://nixuge0107.github.io/2018/05/23/TensorFlow-训练自己的图片（三）/" target="_blank" rel="noopener">TensorFlow-模型的建立</a></li>
 <li>TensorFlow-模型的训练</li>
-<li><a href="../2018/05/23/TensorFlow-训练自己的图片（五）/">TensorFlow-模型的验证</a></li>
+<li><a href="https://nixuge0107.github.io/2018/05/23/TensorFlow-训练自己的图片（五）/" target="_blank" rel="noopener">TensorFlow-模型的验证</a></li>
 </ol>
 <hr>
 <h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><ol>
 <li>TensorFlow-Session会话</li>
 <li>训练的流程<br>2.1  初始化<br>2.2  循环训练<br>2.3  保存模型</li>
 </ol>
-<h1 id="TensorFlow-Session"><a href="#TensorFlow-Session" class="headerlink" title="TensorFlow-Session"></a>TensorFlow-Session</h1><h2 id="在会话中载入图"><a href="#在会话中载入图" class="headerlink" title="在会话中载入图"></a>在会话中载入图</h2><p>你有没有想过，Python作为解释性语言速度是很慢的，如何调用其多个GPU并行进行快速运算呢？</p>
+<h1 id="TensorFlow-Session"><a href="#TensorFlow-Session" class="headerlink" title="TensorFlow-Session"></a>TensorFlow-Session</h1><a id="more"></a>
+<h2 id="在会话中载入图"><a href="#在会话中载入图" class="headerlink" title="在会话中载入图"></a>在会话中载入图</h2><p>你有没有想过，Python作为解释性语言速度是很慢的，如何调用其多个GPU并行进行快速运算呢？</p>
 <p>其实Python只是一层封装，背后还是在执行C/C++。TensorFlow给了一个很好的方案，就是在会话中执行操作。我们所编写的Python程序不会直接执行，会生成一个图；当我们开始执行run操作时就会一次次的把数据传入图的输入端进行训练，Python进行了图的建立和传参，背后有C/C++做支持快速训练。</p>
-<a id="more"></a>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 产生一个会话</span></span><br><span class="line">sess = tf.Session()</span><br><span class="line"><span class="comment"># 所有节点初始化</span></span><br><span class="line">sess.run(tf.global_variables_initializer())</span><br></pre></td></tr></table></figure>
 <h2 id="在会话中循环执行optimizer"><a href="#在会话中循环执行optimizer" class="headerlink" title="在会话中循环执行optimizer"></a>在会话中循环执行optimizer</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#得到模型和loss</span></span><br><span class="line">train_logits = inference(BATCH_SIZE, N_CLASSES)</span><br><span class="line">train_loss = losses(train_logits, batch_size=BATCH_SIZE)</span><br><span class="line"><span class="comment">#得到训练的optimizer优化器</span></span><br><span class="line">train_op = trainning(train_loss, learning_rate)</span><br><span class="line"><span class="comment">#循环执行optimizer，以获得更小的loss</span></span><br><span class="line">_ = sess.run(train_op, feed_dict=&#123;X: image_batch, Y: label_batch&#125;)</span><br></pre></td></tr></table></figure>
 <h2 id="获得loss与accuracy"><a href="#获得loss与accuracy" class="headerlink" title="获得loss与accuracy"></a>获得loss与accuracy</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tra_loss = sess.run(train_loss, feed_dict=&#123;X: image_batch, Y: label_batch&#125;)</span><br><span class="line">tra_acc = sess.run(train_acc, feed_dict=&#123;X: image_batch, Y: label_batch&#125;)</span><br></pre></td></tr></table></figure>
@@ -529,7 +529,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -647,7 +647,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共9.7k字</span>
+  <span class="post-count">博客全站共10.2k字</span>
 </div>
         
 
